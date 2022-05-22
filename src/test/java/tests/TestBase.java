@@ -12,6 +12,8 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static drivers.DeviceDriver.getDeviceDriver;
+import static helpers.Attach.getSessionId;
+
 
 public class TestBase {
     private static final String deviceHost = System.getProperty("deviceHost");
@@ -30,11 +32,11 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-        //String sessionId = getSessionId();
+        String sessionId = getSessionId();
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         closeWebDriver();
-        //Attach.video(sessionId);
+        Attach.video(sessionId);
     }
 
 }
