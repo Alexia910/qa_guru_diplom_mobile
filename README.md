@@ -53,7 +53,7 @@
 >deviceName={Название из android studio или adb, например: Nexus 4 API 30}
 >platformName=Android
 >platformVersion={Например: 11.0}
->rl=http://localhost:4723/wd/hub
+>url=http://localhost:4723/wd/hub
 >appFileName=GnucashAndroid_v2.4.0.apk
 >appUrl=https://github.com/codinguser/gnucash-android/releases/download/v2.4.0/GnucashAndroid_v2.4.0.apk?raw=true
 >```
